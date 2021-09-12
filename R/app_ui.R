@@ -10,7 +10,7 @@ app_ui <- function(request) {
     dashboardPage(skin = "blue",
                   dashboardHeader(title = "AGP775"),
                   dashboardSidebar(
-                    sidebarMenu(menuItem("global alignments",tabName = "GA"),
+                    sidebarMenu(menuItem("global and local alignments",tabName = "GA"),
                                 menuItem("Affine Gap Penalties",tabName = "AGP")),
                     textInput("data1","seq1:"),
                     textInput("data2","seq2:")
@@ -21,9 +21,12 @@ app_ui <- function(request) {
                               numericInput("m1","march :score:",value=0),
                               numericInput("rm1","dismarch :score:",value=0),
                               numericInput("gap1","gap score:",value=0),
-                              actionButton("submit1","submit now"),
+                              actionButton("submit1","global alignments"),
+                              actionButton("submit3","local alignments"),
                               tableOutput("r1"),
-                              tableOutput("r1seq")
+                              tableOutput("r1seq"),
+                              tableOutput("r11"),
+                              tableOutput("r11seq")
                               
                       ),
                       tabItem(tabName = "AGP",
