@@ -1,6 +1,5 @@
 # shinyAGP775
-计算分子生物学作业
-仿射罚分、全局比对
+Affine Penalty Academic
 ## Installation
 
 You can install `shinyAGP775` from github using devtools :
